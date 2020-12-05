@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+  .calculator {
+    height: 700px;
+    width: 500px;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(160, 151, 151);
+  }
+
+  .display {
+    display: grid;
+    grid-row: 1;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
+    background-color: rgb(20, 209, 223);
+  }
+
+  .controls {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .held-label {
+    grid-row: 1;
+    grid-column: 1 / 6;
+    text-decoration: underline;
+    font-size: 40px;
+  }
+
+  .held-value {
+    grid-row: 2;
+    grid-column: 1 / 6;
+    font-size: 40px;
+  }
+
+  .next-operation {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 40px;
+  }
+
+  .next-value {
+    grid-row: 3;
+    grid-column: 2 / 6;
+    font-size: 50px;
+  }
+
+  .memory {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+  }
+
+  .operations {
+    display: grid;
+    grid-column: 4 / 5;
+    grid-row: 1 / 6;
+    grid-gap: 10px;
+  }
+
+  .digits {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .w2 {
+    grid-column: span 2;
+  }
+
+  .operations button {
+    background-color: rgb(217, 238, 27);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    
+  }
+
+  .memory button {
+    background-color: coral;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  .digits button {
+    background-color: rgb(205, 161, 240);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+  }
